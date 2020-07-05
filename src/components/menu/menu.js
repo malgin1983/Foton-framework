@@ -1,15 +1,29 @@
 import { CreateComponent } from '../../index.js'
 import '../../style.css'
 
+
+const data = [
+	{name: 'Пункт 1 '},
+	{name: 'Пункт 2 '},
+	{name: 'Пункт 3 '}
+]
+
+const Item = (data) => {
+	const elements =[]
+	data.map(item => {
+		elements.push(`<li class="menu__list-item">${item.name}</li>`)
+	})
+	const res = elements.join('')
+	return res
+}
+
 const Menu = (block) => {
 
 	const menu =  `<div class="menu">
 						<div class="menu__logo">Meню </div>
 						<div class="menu__line"></div>
 						<ul class="menu__list">
-							<li class="menu__list-item">Пункт 1</li>
-							<li class="menu__list-item">Пункт 2</li>
-							<li class="menu__list-item">Пункт 3</li>
+						    ${Item(data)}
 						</ul>
 					</div>
 				 `
@@ -17,4 +31,3 @@ const Menu = (block) => {
 
 }
 export default  Menu
-
