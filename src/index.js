@@ -1,34 +1,13 @@
-import './style.css'
-import MainPage from "./Pages/Main";
+import { React } from './core/React'
+import { Menu } from './components/Menu'
+import { EditMenu } from './components/editMenu/EditMenu'
+import { MenuActions } from './components/menuActions/MenuActions'
 
-export class  CreateEntryPage{
-	constructor(fragment, classWrapper) {
-		this.fragment = fragment
-		this.className  = classWrapper
-	}
-	mountComponent(){
-		const target = document.querySelector('#app');
-		const element = document.createElement('div')
-		element.classList.add(this.className)
-		element.innerHTML = this.fragment
-		target.insertAdjacentElement('afterBegin', element);
-	}
-}
 
-export class CreateComponent {
-	constructor(fragment, position = "afterBegin", parentSelector, classWrapper) {
-		this.parent  = document.querySelector('.' + parentSelector)
-		this.fragment = fragment
-		this.position = position
-		this.classWrapper = classWrapper
+const react = new React('#app', {
+	components: [Menu, EditMenu, MenuActions],
+});
 
-	}
-	render(){
-		const target = this.parent;
-		const wrapper = document.createElement('div')
-		wrapper.classList.add(this.classWrapper)
-		wrapper.innerHTML = this.fragment
-		target.insertAdjacentElement(this.position, wrapper);
-	}
-}
-MainPage()
+react.render();
+
+console.log('App start');
