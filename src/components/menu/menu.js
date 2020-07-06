@@ -1,4 +1,4 @@
-import { CreateComponent } from '../../index.js'
+import { CreateComponent } from '../../_index.js'
 import '../../style.css'
 
 

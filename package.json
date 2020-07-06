@@ -2,9 +2,9 @@
     "name": "candy",
     "version": "1.0.0",
     "description": "Render front",
-    "main": "src/index.js",
+    "main": "src/_index.js",
     "scripts": {
-        "start": "webpack-dev-server --mode development --hot --progress --color --port 3000 --open",
+        "start": "webpack-dev-server --mode development --hot --progress --color --port 3200 --open",
         "build": "webpack -p --progress --colors"
     },
     "author": "Malgin Vadim",

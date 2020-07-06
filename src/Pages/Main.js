@@ -1,4 +1,4 @@
-import {CreateEntryPage} from '../index.js'
+import {CreateEntryPage} from '../_index.js'
 import Menu from "../components/menu/menu";
 
 
