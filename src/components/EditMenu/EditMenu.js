@@ -1,7 +1,7 @@
-import { RComponent } from '../../core/RComponent'
+import { FotonComponent } from '../../core/FotonComponent'
 import { getTemplate } from './themplate'
 
-export class EditMenu extends RComponent {
+export class EditMenu extends FotonComponent {
 	static className = 'edit-menu'
 
 	constructor($root, options) {

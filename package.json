@@ -1,10 +1,11 @@
 {
-    "name": "candy",
+    "name": "Foton-framework",
     "version": "1.0.0",
     "description": "Render front",
     "main": "src/_index.js",
     "scripts": {
         "start": "webpack-dev-server --mode development --hot --progress --color --port 3200 --open",
+        "dev": "webpack --mode development",
         "build": "webpack -p --progress --colors"
     },
     "author": "Malgin Vadim",
