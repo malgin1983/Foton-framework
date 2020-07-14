@@ -4,8 +4,9 @@ import { MenuActions } from './components/MenuActions/MenuActions'
 
 
 const foton = new Foton('#app', {
-	components: [MenuActions, EditMenu, ],
+	components: [MenuActions, EditMenu],
 	className: 'root-class',
+	props: {arr: [1,2,3,4] }
 });
 
 foton.render();

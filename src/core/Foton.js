@@ -5,16 +5,15 @@ export class Foton {
 		this.$el = $(selector); //object new Dom
 		this.components = options.components || [];
 		this.className = options.className || null;
+		this.props = options.props || {}
 	}
 
 	getRoot() {
 		const $root = $.create('div', this.className)
-		const componentOptions = {} //todo
+		const componentOptions = {props: this.props }
 
 
 		this.components = this.components.map(Component => {
-			console.log('Component', Component)
-
 			const $el = $.create('div', Component.className)
 			const component = new Component($el, componentOptions);
 			$el.html(component.toHTML())

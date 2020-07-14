@@ -11,7 +11,8 @@ export class MenuItem extends FotonComponent {
 	}
 
 	toHTML() {
-		return `<span >Пункт </span>`
+		console.log('MenuItem props', this.props)
+		return `<span >Пункт ${this.props.data}</span>`
 	}
 }
 
