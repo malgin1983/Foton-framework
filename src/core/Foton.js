@@ -12,7 +12,6 @@ export class Foton {
 		const $root = $.create('div', this.className)
 		const componentOptions = {props: this.props }
 
-
 		this.components = this.components.map(Component => {
 			const $el = $.create('div', Component.className)
 			const component = new Component($el, componentOptions);

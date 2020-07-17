@@ -2,3 +2,16 @@
     font-size: 24px;
     padding-right: 40px;
 }
+
+.menu-action-item__text{
+    padding: 12px;
+    transition-property: background-color, border-bottom-color;
+    transition-duration: 1s;
+}
+
+.menu-action-item__text:hover {
+    background-color: antiquewhite;
+    border-bottom: 1px solid indigo;
+    padding-bottom: 12px;
+    padding-top:  4px;
+}

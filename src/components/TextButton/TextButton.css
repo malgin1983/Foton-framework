@@ -1,0 +1,9 @@
+.text-button-component {
+    padding-top: 10px;
+    color: #2F80ED;
+    font-size: 18px;
+    cursor: pointer;
+}
+.text-button-component:hover {
+    color: darkcyan;
+}

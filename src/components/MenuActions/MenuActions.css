@@ -7,3 +7,9 @@
     padding: 36px;
     background-color: #E0E0E0;
 }
+.menu-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 40px;
+}

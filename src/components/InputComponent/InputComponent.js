@@ -1,6 +1,8 @@
 import { FotonComponent } from '../../core/FotonComponent'
-import './MenuItem.css'
-export class MenuItem extends FotonComponent {
+
+
+
+export class InputComponent extends FotonComponent {
 	static className = 'menu-action-item'
 
 	constructor($root, options) {
@@ -10,7 +12,7 @@ export class MenuItem extends FotonComponent {
 	}
 
 	toHTML() {
-		return `<span  class="menu-action-item__text" >Пункт ${this.props.data}</span>`
+		return `<input data-id="${this.props.data + 1}" placeholder="Пункт N ${this.props.data + 1}" />`
 	}
 }
 
