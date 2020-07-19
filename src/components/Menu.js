@@ -1,16 +1,17 @@
-import { RComponent } from '../core/RComponent'
+import { FotonComponent } from '../core/FotonComponent'
 
-export class Menu extends RComponent {
+export class Menu extends FotonComponent {
 	static className = 'menu'
 
 	constructor($root, options) {
 		super($root, {
+			name: 'Menu',
 			...options
-		});
+		})
 	}
 
 	toHTML() {
-		return `<h1>Hello</h1>`
+		const state = this.store.getState()
+		return `<h1>${state.title}</h1>`
 	}
 }
-

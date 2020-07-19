@@ -1,26 +1,23 @@
-
 function renderTitle() {
 	return `
-		<h2>Редактирование меню</h2>
-	`
+    <h2>Редактирование меню</h2>
+  `
 }
 
 function inputRow(item, index) {
 	return `
-		<input data-id="${index}" placeholder="Введите текст" />
-	`
+<div style="margin-bottom: 10px">
+    <input data-id="${index}" placeholder="Введите текст" />
+</div>
+  `
 }
 
 export function getTemplate(store) {
-	const menuItem = [
-		{},
-		{},
-		{}
-	] // from store;
-	const title = renderTitle();
-	const renderItems = menuItem.map(inputRow).join('');
+	const menuItem = [{}, {}, {}] // from store;
+	const title = renderTitle()
+	const renderItems = menuItem.map(inputRow).join('')
 
 	const result = [title, renderItems]
 
-	return result.join('');
+	return result.join('')
 }

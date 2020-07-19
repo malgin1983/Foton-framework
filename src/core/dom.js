@@ -1,14 +1,18 @@
 class Dom {
 	constructor(selector) {
-		if(typeof selector === 'string') {
+		if (typeof selector === 'string') {
 			this.$el = document.querySelector(selector)
 		} else {
-			this.$el = selector;
+			this.$el = selector
 		}
 	}
 
 	on(eventName, cb) {
 		this.$el.addEventListener(eventName, cb)
+	}
+
+	off(eventName, cb) {
+		this.$el.removeEventListener(eventName, cb)
 	}
 
 	html(html) {

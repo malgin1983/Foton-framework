@@ -1,23 +1,25 @@
-import { RComponent } from '../../core/RComponent'
-import { React } from '../../core/React'
-import { Menu } from '../Menu'
+import { FotonComponent } from '../../core/FotonComponent'
 
-export class MenuActions extends RComponent {
+export class MenuActions extends FotonComponent {
 	static className = 'menu-actions'
 
 	constructor($root, options) {
 		super($root, {
+			name: 'MenuActions',
 			...options
-		});
-	}
-
-	toHTML() {
-		return '<div id="menu-actions"></div>'
+		})
 	}
 
 	init() {
-		new React('#menu-actions', {
-			components: [Menu, Menu, Menu],
-		}).render();
+		super.init()
+
+		this.$on('onClickEditMenu', $el => {
+			// example
+			console.log('onClickEditMenu', $el)
+		})
+	}
+
+	toHTML() {
+		return '<div id="menu-actions">Menu action</div>'
 	}
 }
