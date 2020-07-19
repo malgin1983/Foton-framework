@@ -6,7 +6,7 @@ import {TextComponent} from "../TextComponent/TextComponent";
 import {ComponentSeparator} from "../ComponentSeparator/ComponentSeparator";
 
 export class MenuActions extends FotonComponent {
-	static className = 'wrapper-menu'
+	static className = 'wrapper-menu-actions'
 
 	constructor($root, options) {
 		super($root, {

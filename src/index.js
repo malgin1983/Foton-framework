@@ -1,13 +1,9 @@
 import { Foton } from './core/Foton'
-import { EditMenu } from './components/EditMenu/EditMenu'
-import { MenuActions } from './components/MenuActions/MenuActions'
-import {EditInputMenu} from "./components/EditInputMenu/EditInputMenu";
+import {InputMenuPage} from "./Pages/InputMenu/InputMenuPage";
 
 
 const foton = new Foton('#app', {
-	components: [MenuActions, EditInputMenu],
-	className: 'root-class',
-	props: {arr: [1,2,3,4], inputArr: [1,2,3,4,5]}
+	components: [ InputMenuPage],
 });
 
 foton.render();
