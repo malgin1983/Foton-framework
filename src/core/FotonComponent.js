@@ -1,7 +1,8 @@
-export class RComponent {
+export class FotonComponent {
 	constructor($root, options) {
 		this.$root = $root;
 		this.listeners = options.listeners || []; //todo
+		this.props = options.props || {}
 	}
 
 	toHTML() {

@@ -1,13 +1,11 @@
-import { React } from './core/React'
-import { Menu } from './components/Menu'
-import { EditMenu } from './components/editMenu/EditMenu'
-import { MenuActions } from './components/menuActions/MenuActions'
+import { Foton } from './core/Foton'
+import {InputMenuPage} from "./Pages/InputMenu/InputMenuPage";
 
 
-const react = new React('#app', {
-	components: [Menu, EditMenu, MenuActions],
+const foton = new Foton('#app', {
+	components: [ InputMenuPage],
 });
 
-react.render();
+foton.render();
 
 console.log('App start');

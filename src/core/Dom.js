@@ -1,3 +1,5 @@
+
+//selector - Entry point selector
 class Dom {
 	constructor(selector) {
 		if(typeof selector === 'string') {
@@ -7,7 +9,7 @@ class Dom {
 		}
 	}
 
-	on(eventName, cb) {
+	onEvent(eventName, cb) {
 		this.$el.addEventListener(eventName, cb)
 	}
 
@@ -31,6 +33,8 @@ class Dom {
 		return this
 	}
 }
+
+
 
 export function $(selector) {
 	return new Dom(selector)
